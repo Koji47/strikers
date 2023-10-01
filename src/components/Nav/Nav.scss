@@ -1,0 +1,27 @@
+@use "../../styles/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Roboto&display=swap");
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  margin-top: 2rem;
+  margin-left: 8vw;
+  padding: 1.2rem;
+  background-color: $color-dark-grey;
+  box-shadow: 0px 2vh 6vh rgba($color-dark-grey, 0.5);
+  border-radius: 2rem;
+
+  &__buttons--right {
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+  }
+}
+.logo {
+  position: absolute;
+  left: 47%;
+  top: 2.8%;
+}
+h1 {
+  font-family: $font-title;
+}

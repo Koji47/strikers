@@ -1,0 +1,14 @@
+@use "../../styles/variables" as *;
+
+.button {
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-family: $font-text;
+  padding: 0rem 2rem 0rem 2rem;
+
+  &--secondary {
+    color: $color-light-gold;
+  }
+}

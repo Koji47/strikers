@@ -1,0 +1,75 @@
+@use "../../styles/variables" as *;
+
+.FighterCard-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  background-color: $color-dark-grey;
+  margin: 4rem 10rem 2rem 10rem;
+  border-radius: 4rem;
+  height: 17rem;
+
+  &__gym {
+    margin: 2rem;
+    font-family: $font-title;
+  }
+  &__favourite-strikes {
+    height: 17rem;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      display: flex;
+      justify-content: center;
+      font-family: $font-title;
+      font-size: 32px;
+    }
+
+    &__strikes {
+      display: flex;
+      align-items: center;
+      font-family: $font-title;
+      height: 4rem;
+
+      font-size: 24px;
+      &__1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 32px;
+      }
+      &__2 {
+        margin: 0rem;
+
+        font-size: 32px;
+      }
+      &__3 {
+        margin: 1rem;
+      }
+      &__4 {
+        margin: 1rem;
+      }
+    }
+  }
+
+  &__info {
+    font-family: $font-text;
+    font-size: 32px;
+    &__name {
+      margin: 0rem 1rem 0rem 1rem;
+    }
+    &__discipline {
+      margin: 0rem 1rem 0rem 1rem;
+      color: $color-grey;
+    }
+    &__location {
+      margin: 0rem 1rem 0rem 1rem;
+      color: $color-grey;
+    }
+  }
+  &__img {
+    margin: 2rem;
+    height: 15rem;
+  }
+}
