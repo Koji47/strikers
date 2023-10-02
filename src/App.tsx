@@ -1,51 +1,15 @@
-import FighterCard from "./components/FighterCard/FighterCard";
-import Nav from "./components/Nav/Nav";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Fighters from "./pages/Fighters/Fighters";
 
-function App() {
-  let test = 1;
-  const testFunction = () => {
-    test = test + 1;
-  };
-
-  const strikes = [
-    { name: "Teep", power: "★★☆☆☆", speed: "★★★★☆" },
-    { name: "Left kick", power: "★★★☆☆", speed: "★★★★☆" },
-    { name: "Jab", power: "★★☆☆☆", speed: "★★★★★" },
-    { name: "Question mark kick", power: "★★★☆☆", speed: "★★☆☆☆" },
-  ];
-
+const App = () => {
   return (
-    <>
-      <Nav />
-      <FighterCard
-        gym={"Team Tieu"}
-        first_name={"Chu"}
-        last_name={"Lam"}
-        discipline={"Muay Thai"}
-        location={"London"}
-        strikes={strikes}
-        picture_url={`/src/assets/ChuLam_PFP.jpg`}
-      />
-      <FighterCard
-        gym={"Team Tieu"}
-        first_name={"Chu"}
-        last_name={"Lam"}
-        discipline={"Muay Thai"}
-        location={"London"}
-        strikes={strikes}
-        picture_url={`/src/assets/ChuLam_PFP.jpg`}
-      />
-      <FighterCard
-        gym={"Team Tieu"}
-        first_name={"Chu"}
-        last_name={"Lam"}
-        discipline={"Muay Thai"}
-        location={"London"}
-        strikes={strikes}
-        picture_url={`/src/assets/ChuLam_PFP.jpg`}
-      />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+
+      <Route path="/fighters" element={<Fighters />} />
+    </Routes>
   );
-}
+};
 
 export default App;
