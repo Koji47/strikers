@@ -1,13 +1,21 @@
 @use "../../styles/variables" as *;
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Roboto&display=swap");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 80vw;
   margin-top: 2rem;
   margin-left: 8vw;
   padding: 1.2rem;
-  background-color: $color-dark-grey;
+  background-color: rgba($color-dark-grey, 0.9);
   box-shadow: 0px 2vh 6vh rgba($color-dark-grey, 0.5);
   border-radius: 2rem;
 
@@ -18,9 +26,8 @@
   }
 }
 .logo {
-  position: absolute;
-  left: 47%;
-  top: 2.8%;
+  font-size: 42px;
+  margin-left: 24vw;
 }
 h1 {
   font-family: $font-title;

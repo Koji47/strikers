@@ -1,0 +1,49 @@
+@use "../../styles/variables" as *;
+
+.FavouriteStrikes {
+  &__title {
+    display: flex;
+    justify-content: center;
+    font-family: $font-title;
+    font-size: 32px;
+    color: $color-light-gold;
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 18px;
+    margin-top: 1rem;
+
+    &__1,
+    &__2,
+    &__3,
+    &__4 {
+      margin: 1rem;
+    }
+
+    &__name,
+    &__power,
+    &__speed {
+      margin: 0;
+      font-family: $font-title;
+      font-size: 20px;
+    }
+
+    &__name {
+      margin-top: 0.5rem;
+    }
+
+    &__power,
+    &__speed {
+      margin-top: 0.3rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
