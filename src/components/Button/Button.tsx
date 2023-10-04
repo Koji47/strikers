@@ -4,7 +4,7 @@ import "./Button.scss";
 type ButtonProps = {
   label: string;
   variant?: "secondary";
-  onClick: MouseEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
 const Button = ({ label, variant, onClick }: ButtonProps) => {

@@ -1,11 +1,7 @@
-import Nav from "../../components/Nav/Nav";
+import FighterCard from "../../components/FighterCard/FighterCard";
+import "./Fighters.scss";
 
 const Fighters = () => {
-  let test = 1;
-  const testFunction = () => {
-    test = test + 1;
-  };
-
   const strikes = [
     { name: "Teep", power: "★★☆☆☆", speed: "★★★★☆" },
     { name: "Left kick", power: "★★★☆☆", speed: "★★★★☆" },
@@ -15,7 +11,43 @@ const Fighters = () => {
 
   return (
     <>
-      <Nav />
+      {" "}
+      <FighterCard
+        gym={"Team Tieu"}
+        first_name={"Chu"}
+        last_name={"Lam"}
+        discipline={"Muay Thai"}
+        location={"London"}
+        strikes={strikes}
+        picture_url={`/src/assets/ChuLam_PFP.jpg`}
+      />{" "}
+      <FighterCard
+        gym={"Team Tieu"}
+        first_name={"Chu"}
+        last_name={"Lam"}
+        discipline={"Muay Thai"}
+        location={"London"}
+        strikes={strikes}
+        picture_url={`/src/assets/ChuLam_PFP.jpg`}
+      />{" "}
+      <FighterCard
+        gym={"Team Tieu"}
+        first_name={"Chu"}
+        last_name={"Lam"}
+        discipline={"Muay Thai"}
+        location={"London"}
+        strikes={strikes}
+        picture_url={`/src/assets/ChuLam_PFP.jpg`}
+      />{" "}
+      <FighterCard
+        gym={"Team Tieu"}
+        first_name={"Chu"}
+        last_name={"Lam"}
+        discipline={"Muay Thai"}
+        location={"London"}
+        strikes={strikes}
+        picture_url={`/src/assets/ChuLam_PFP.jpg`}
+      />
     </>
   );
 };

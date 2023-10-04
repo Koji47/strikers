@@ -17,7 +17,6 @@ const Home = () => {
 
   return (
     <>
-      <Nav />
       <FeaturedStrike
         video_url={
           "https://www.youtube.com/embed/FSVcmMd9bR4?si=sWGFVNPRmxRphSMC"
