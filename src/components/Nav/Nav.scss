@@ -19,10 +19,16 @@
     justify-content: space-between;
     width: 30vw;
   }
+
+  &__buttons--left {
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+  }
 }
 .logo {
   font-size: 42px;
-  margin-left: 24vw;
+  margin: auto;
 }
 h1 {
   font-family: $font-title;

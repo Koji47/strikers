@@ -4,7 +4,7 @@ import "./StrikeCard.scss";
 type StrikeCardProps = {
   video_url_tutorial: string;
   video_url_fighter: string;
-  image_url_strike: string;
+  icon_url_strike: string;
   name: string;
   speed: string;
   power: string;
@@ -13,7 +13,7 @@ type StrikeCardProps = {
 const StrikeCard = ({
   video_url_tutorial,
   video_url_fighter,
-  image_url_strike,
+  icon_url_strike,
   name,
   power,
   speed,
@@ -21,11 +21,7 @@ const StrikeCard = ({
   return (
     <div className="Strike">
       <h4 className="Strike__name">{name}</h4>
-      <img
-        src={image_url_strike}
-        alt="Strike Image"
-        className="Strike__image"
-      />
+      <img src={icon_url_strike} alt="Strike Image" className="Strike__image" />
       <div className="Strike__stats">
         <h6 className="Strike__stats__power">Power: {power}</h6>
         <h6 className="Strike__stats__speed">Speed: {speed}</h6>
