@@ -22,10 +22,10 @@ A full stack project with a complete front end and back end, the app displays da
 
 ## Planning
 
-![Trello](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/striker_trello.PNG)
-![Tree](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/striker_tree.PNG)
-![Styling](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/striker_styling.PNG)
-![Figma](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/striker_figma.PNG)
+![Trello](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_trello.PNG)
+![Tree](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_tree.PNG)
+![Styling](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_styling.PNG)
+![Figma](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_figma.PNG)
 
 ## Installation
 
