@@ -5,6 +5,7 @@ import { useState } from "react";
 import Select from "../../components/Select/Select";
 import { NavLink } from "react-router-dom";
 import Button from "../../components/Button/Button";
+import Loading from "../../components/Loading/Loading";
 
 type FightersPageProps = {
   fighters: Fighters[];
@@ -12,31 +13,6 @@ type FightersPageProps = {
 
 const FightersPage = ({ fighters }: FightersPageProps) => {
   const [filterByDiscipline, setFilterByDiscipline] = useState("All");
-  // const anything = Object.values(fighters[0]).map((fighter) => {
-  //   // console.log(fighter);
-  //   if (typeof fighter === "object") {
-  //     Object.values(fighter).map((value) => {
-  //       console.log(value);
-
-  //       return value;
-  //     });
-  //   }
-  //   return fighter;
-  // });
-
-  // const strikesArray = ["strikes1", "strikes2", "strikes3", "strikes4"];
-  // const favouriteStrikes = Object.keys(fighters).map((key, index) => {
-  //   if (strikesArray.includes(key)) {
-  //     return Object.values(fighters)[index];
-  //   }
-  // });
-
-  // console.log(anything);
-
-  // console.log(fighters[0]);
-
-  // console.log(typeof fighters[0].strikes1);
-
   const filteredFightersByDiscipline = fighters.filter((fighter) =>
     filterByDiscipline === "All"
       ? true
@@ -53,6 +29,8 @@ const FightersPage = ({ fighters }: FightersPageProps) => {
     { name: "Muay Thai", id: "Muay Thai" },
     { name: "Boxing", id: "Boxing" },
   ];
+
+  if (!fighters) return <Loading />;
 
   return (
     <>

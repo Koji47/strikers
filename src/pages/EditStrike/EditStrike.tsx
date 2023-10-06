@@ -64,6 +64,7 @@ const EditStrike = ({ strikes }: EditStrikeProps) => {
       alert(message);
     }
     navigate("/");
+    window.location.reload();
   };
 
   const handleShowForm = () => setShowForm(!showForm);

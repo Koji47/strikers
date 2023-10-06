@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import StrikeResponse from "../../types/StrikeResponse";
-import "./CreateStrike.scss";
 import CustomForm from "../../components/Form/Form";
+import Loading from "../../components/Loading/Loading";
 
 type CreateStrikeProps = {
   strikes: StrikeResponse[];
@@ -22,13 +22,17 @@ const CreateStrike = ({ strikes }: CreateStrikeProps) => {
     if (result.ok) {
       alert("Strike added successfully");
       const strike = await result.json();
+
       navigate("/strike/" + strike.id);
+      window.location.reload();
     } else {
       const message = await result.text();
       console.log(newStrike);
       alert(message);
     }
   };
+
+  if (!strikes) return <Loading />;
 
   return (
     <div className="add-strike">
