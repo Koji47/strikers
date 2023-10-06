@@ -10,6 +10,7 @@ A full stack project with a complete front end and back end, the app displays da
 
 ## Table of Contents
 
+- [Planning](#planning)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Pages](#pages)
@@ -18,6 +19,11 @@ A full stack project with a complete front end and back end, the app displays da
   - [FightersPage](#fighterspage)
   - [EditStrike](#editstrike)
   - [CreateStrike](#createstrike)
+
+## Planning
+
+![Trello](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/striker_trello.PNG)
+![Tree](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/striker_tree.PNG)
 
 ## Installation
 
@@ -44,7 +50,3 @@ the Home page also displays 3 random fighters as a Fighter Card
 The Strikes page displays all strikes,
 users are able to filter through the strikes by the strike_type "Kick" or "Punch"
 users can access edit strikes and create strikes from this page
-
-## Planning
-
-![Trello](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers.PNG)
