@@ -1,0 +1,21 @@
+@use "../../styles/variables" as *;
+
+.edit-strike {
+  margin: auto;
+  &__title {
+    margin-left: 46.5vw;
+    margin-top: 1rem;
+    color: $color-light-gold;
+  }
+
+  &__button {
+    width: 10rem;
+    height: 3rem;
+    margin-top: 2rem;
+    margin-left: 28vw;
+    background-color: $color-light-gold;
+    border: 0;
+    border-radius: 1rem;
+    font-size: 24px;
+  }
+}

@@ -24,10 +24,6 @@ const App = () => {
   const getFighters = async () => {
     const response = await fetch("http://localhost:8080/fighters");
     const fightersData = await response.json();
-    // console.log(JSON.stringify(fightersData[0]));
-    // console.log(fightersData[0].strikes1);
-    // console.log(`${fightersData[0]}`);
-
     setFightersDB(fightersData);
   };
 
@@ -62,18 +58,14 @@ const App = () => {
             }
           />
         )}
-
         <Route path="/fighters" element={<Fighters fighters={fightersDB} />} />
-
         {strikesDB && (
           <Route path="/strikes" element={<Strikes strikes={strikesDB} />} />
         )}
-
         <Route
           path="/strike/:id"
           element={<EditStrike strikes={strikesDB} />}
         />
-
         <Route
           path="/strike/create"
           element={<CreateStrike strikes={strikesDB} />}

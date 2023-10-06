@@ -88,12 +88,12 @@ const EditStrike = ({ strikes }: EditStrikeProps) => {
           <p>Loading strike data...</p>
         )}
 
-        <div className="edit-fighter__buttons">
+        <div className="edit-strike__buttons">
           <button
             className={
               showForm
-                ? "edit-fighter__button"
-                : "edit-fighter__button edit-fighter__button--secondary"
+                ? "edit-strike__button"
+                : "edit-strike__button edit-strike__button--secondary"
             }
             onClick={handleShowForm}
           >
@@ -102,8 +102,8 @@ const EditStrike = ({ strikes }: EditStrikeProps) => {
           <button
             className={
               showForm
-                ? "edit-fighter__button"
-                : "edit-fighter__button edit-fighter__button--secondary"
+                ? "edit-strike__button"
+                : "edit-strike__button edit-strike__button--secondary"
             }
             onClick={handleDeleteStrike}
           >

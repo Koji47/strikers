@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import StrikeResponse from "../../types/StrikeResponse";
 import "./Form.scss";
 
@@ -17,12 +17,6 @@ const CustomForm = ({
 
   const handleValidation = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
-    // if (Object.values(formData).some((value) => !value)) {
-    //   alert("Missing fields, unable to update");
-    //   return;
-    // }
-
     handleSubmit(formData);
   };
 
@@ -37,6 +31,7 @@ const CustomForm = ({
     <div className="Form-container">
       <h1 className="Form-container__title">{formTitle}</h1>
       <form className="Form-container__form" onSubmit={handleValidation}>
+        <h4 className="Form-container__subtitle">Name:</h4>
         <input
           id="name"
           className="Form-container__input"

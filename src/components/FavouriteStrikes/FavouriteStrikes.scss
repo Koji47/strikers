@@ -5,15 +5,24 @@
     display: flex;
     justify-content: center;
     font-family: $font-title;
-    font-size: 32px;
+    font-size: 28px;
     color: $color-light-gold;
   }
 
+  &__list-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__strike {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    width: 10rem;
+  }
   &__list {
     display: flex;
-    align-items: flex-end;
     justify-content: center;
-    font-size: 18px;
     margin-top: 1rem;
 
     &__1,
@@ -28,7 +37,7 @@
     &__speed {
       margin: 0;
       font-family: $font-title;
-      font-size: 20px;
+      font-size: 18px;
     }
 
     &__name {
@@ -42,6 +51,7 @@
     &__power,
     &__speed {
       margin-top: 0.3rem;
+      color: $color-grey;
     }
   }
 

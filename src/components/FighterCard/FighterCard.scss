@@ -15,7 +15,7 @@
   &__gym {
     font-family: $font-title;
     margin: 2rem;
-    font-size: 28px;
+    font-size: 24px;
   }
   &__strikes {
     display: flex;
@@ -24,7 +24,8 @@
 
   &__info {
     font-family: $font-text;
-    font-size: 24px;
+    font-size: 18px;
+    width: 20rem;
 
     &__name {
       margin: 0rem 1rem 0rem 1rem;
@@ -40,13 +41,16 @@
   }
   &__img {
     margin: 2rem;
-    height: 15rem;
+    height: 14rem;
+    width: 14rem;
+    max-width: 14rem;
+    object-fit: cover;
   }
 
   &__button {
     display: flex;
     align-self: flex-start;
     color: $color-gold;
-    margin: 1.2rem 0rem 0rem 1rem;
+    margin: 1.2rem 0rem 0rem 0rem;
   }
 }

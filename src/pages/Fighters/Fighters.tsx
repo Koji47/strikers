@@ -3,6 +3,8 @@ import "./Fighters.scss";
 import Fighters from "../../types/FighterResponse";
 import { useState } from "react";
 import Select from "../../components/Select/Select";
+import { NavLink } from "react-router-dom";
+import Button from "../../components/Button/Button";
 
 type FightersPageProps = {
   fighters: Fighters[];
@@ -54,6 +56,11 @@ const FightersPage = ({ fighters }: FightersPageProps) => {
 
   return (
     <>
+      <div className="create-strike">
+        <NavLink to={"/strike/create"}>
+          <Button label={"Create Strike"} />
+        </NavLink>
+      </div>
       <div className="select-container">
         <Select
           options={optionsByDiscipline}
