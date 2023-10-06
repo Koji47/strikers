@@ -35,6 +35,10 @@
       margin-top: 0.5rem;
     }
 
+    &__error {
+      font-family: $font-title;
+    }
+
     &__power,
     &__speed {
       margin-top: 0.3rem;

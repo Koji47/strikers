@@ -2,7 +2,7 @@
 
 .FighterCard {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   margin: auto;
   border-radius: 4rem;
@@ -15,7 +15,7 @@
   &__gym {
     font-family: $font-title;
     margin: 2rem;
-    font-size: 36px;
+    font-size: 28px;
   }
   &__strikes {
     display: flex;
@@ -24,7 +24,7 @@
 
   &__info {
     font-family: $font-text;
-    font-size: 32px;
+    font-size: 24px;
 
     &__name {
       margin: 0rem 1rem 0rem 1rem;

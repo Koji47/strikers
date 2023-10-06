@@ -3,7 +3,7 @@ type StrikeResponse = {
   name: string;
   speed: string;
   power: string;
-  icon_url: string;
+  strike_type: string;
   video_url_tutorial: string;
   video_url_fighter: string;
 };

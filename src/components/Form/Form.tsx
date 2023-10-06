@@ -1,131 +1,115 @@
-import { ChangeEvent, FormEvent, useState } from "react";
-import FightersRequest from "../../types/FighterRequest";
-import OptionType from "../../types/OptionType";
+import React, { ChangeEvent, FormEvent, useState } from "react";
+import StrikeResponse from "../../types/StrikeResponse";
 import "./Form.scss";
-import Select from "../Select/Select";
 
-type FormProps = {
-  defaultFormState: FightersRequest;
+type CustomFormProps = {
+  defaultFormData: StrikeResponse;
   formTitle: string;
-  handleSubmit: (fighter: FightersRequest) => void;
-  strikes: OptionType[];
+  handleSubmit: (updatedStrike: StrikeResponse) => void;
 };
 
-const Form = ({
-  defaultFormState,
+const CustomForm = ({
+  defaultFormData,
   formTitle,
   handleSubmit,
-  strikes,
-}: FormProps) => {
-  const [Fighter, setFighter] = useState<FightersRequest>(defaultFormState);
+}: CustomFormProps) => {
+  const [formData, setFormData] = useState<StrikeResponse>(defaultFormData);
 
   const handleValidation = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (Object.values(Fighter).some((value) => !value)) {
-      alert("Missing fields, unable to create");
-      return;
-    }
+    // if (Object.values(formData).some((value) => !value)) {
+    //   alert("Missing fields, unable to update");
+    //   return;
+    // }
 
-    handleSubmit(Fighter);
+    handleSubmit(formData);
   };
 
   const handleInput = (
-    event: FormEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>,
-    key: string
+    event: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+    key: keyof StrikeResponse
   ) => {
-    setFighter({ ...Fighter, [key]: event.currentTarget.value });
-
-    return (
-      <div className="Form-container">
-        <h1 className="Form-container__title">{formTitle}</h1>
-        <form className="Form-container__form" onSubmit={handleValidation}>
-          <input
-            id="first_name"
-            className="Form-container__input"
-            type="text"
-            placeholder="First Name"
-            value={Fighter.first_name}
-            onInput={(event) => handleInput(event, "first_name")}
-          />
-          <input
-            id="last_name"
-            className="Form-container__input"
-            type="text"
-            placeholder="Last Name"
-            value={Fighter.last_name}
-            onInput={(event) => handleInput(event, "last_name")}
-          />
-          <input
-            id="gym"
-            className="Form-container__input"
-            type="text"
-            placeholder="Gym"
-            value={Fighter.gym}
-            onInput={(event) => handleInput(event, "gym")}
-          />
-          <input
-            id="location"
-            className="Form-container__input"
-            type="text"
-            placeholder="Location"
-            value={Fighter.location}
-            onInput={(event) => handleInput(event, "location")}
-          />
-          <input
-            id="discipline"
-            className="Form-container__input"
-            type="text"
-            placeholder="Discipline"
-            value={Fighter.discipline}
-            onInput={(event) => handleInput(event, "discipline")}
-          />
-          <input
-            id="age"
-            className="Form-container__input"
-            type="number"
-            placeholder="Age"
-            value={Fighter.age}
-            onInput={(event) => handleInput(event, "age")}
-          />
-
-          <Select
-            labelText={"Select a Strike 1: "}
-            label={"Strike"}
-            options={strikes}
-            onChange={(event) => handleInput(event, "Strike")}
-            defaultOption={"----"}
-            defaultValue={Fighter.strikes1.toString()}
-          />
-          <Select
-            labelText={"Select a Strike 2: "}
-            label={"Strike"}
-            options={strikes}
-            onChange={(event) => handleInput(event, "Strike")}
-            defaultOption={"----"}
-            defaultValue={Fighter.strikes2.toString()}
-          />
-          <Select
-            labelText={"Select a Strike 3: "}
-            label={"Strike"}
-            options={strikes}
-            onChange={(event) => handleInput(event, "Strike")}
-            defaultOption={"----"}
-            defaultValue={Fighter.strikes3.toString()}
-          />
-          <Select
-            labelText={"Select a Strike 3: "}
-            label={"Strike"}
-            options={strikes}
-            onChange={(event) => handleInput(event, "Strike")}
-            defaultOption={"----"}
-            defaultValue={Fighter.strikes3.toString()}
-          />
-          <button type="submit" className="Form-container__button">
-            Submit
-          </button>
-        </form>
-      </div>
-    );
+    setFormData({ ...formData, [key]: event.currentTarget.value });
   };
+
+  return (
+    <div className="Form-container">
+      <h1 className="Form-container__title">{formTitle}</h1>
+      <form className="Form-container__form" onSubmit={handleValidation}>
+        <input
+          id="name"
+          className="Form-container__input"
+          type="text"
+          placeholder="Name"
+          value={formData.name}
+          onChange={(event) => handleInput(event, "name")}
+        />
+        <h4 className="Form-container__subtitle">Power:</h4>
+        <select
+          id="power"
+          className="Form-container__input"
+          value={formData.power}
+          onChange={(event) => handleInput(event, "power")}
+        >
+          <option value="★☆☆☆☆">★☆☆☆☆</option>
+          <option value="★★☆☆☆">★★☆☆☆</option>
+          <option value="★★★☆☆">★★★☆☆</option>
+          <option value="★★★★☆">★★★★☆</option>
+          <option value="★★★★★">★★★★★</option>
+        </select>
+
+        <h4 className="Form-container__subtitle">Speed:</h4>
+        <select
+          id="speed"
+          className="Form-container__input"
+          value={formData.speed}
+          onChange={(event) => handleInput(event, "speed")}
+        >
+          <option value="★☆☆☆☆">★☆☆☆☆</option>
+          <option value="★★☆☆☆">★★☆☆☆</option>
+          <option value="★★★☆☆">★★★☆☆</option>
+          <option value="★★★★☆">★★★★☆</option>
+          <option value="★★★★★">★★★★★</option>
+        </select>
+
+        <h4 className="Form-container__subtitle">Strike Type:</h4>
+        <select
+          id="strike_type"
+          className="Form-container__input"
+          value={formData.strike_type}
+          onChange={(event) => handleInput(event, "strike_type")}
+        >
+          <option value={"Punch"}>Punch</option>
+          <option value={"Kick"}>Kick</option>
+        </select>
+
+        <h4 className="Form-container__subtitle">Fighter Exmaple Video:</h4>
+        <input
+          id="video_url_fighter"
+          className="Form-container__input"
+          type="text"
+          placeholder="Fighter Video URL"
+          value={formData.video_url_fighter}
+          onChange={(event) => handleInput(event, "video_url_fighter")}
+        />
+
+        <h4 className="Form-container__subtitle">Tutorial Video:</h4>
+        <input
+          id="video_url_tutorial"
+          className="Form-container__input"
+          type="text"
+          placeholder="Tutorial Video URL"
+          value={formData.video_url_tutorial}
+          onChange={(event) => handleInput(event, "video_url_tutorial")}
+        />
+
+        <button type="submit" className="Form-container__button">
+          Submit
+        </button>
+      </form>
+    </div>
+  );
 };
+
+export default CustomForm;

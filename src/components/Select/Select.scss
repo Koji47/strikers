@@ -1,0 +1,12 @@
+@use "../../styles/variables" as *;
+.select-container {
+  display: flex;
+  margin: auto;
+  margin-top: 1rem;
+  font-size: 24px;
+  font-family: $font-title;
+}
+
+label {
+  margin: 0rem 1rem 0rem 1rem;
+}

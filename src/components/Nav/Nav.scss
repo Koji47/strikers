@@ -18,17 +18,12 @@
     display: flex;
     justify-content: space-between;
     width: 30vw;
-  }
-
-  &__buttons--left {
-    display: flex;
-    justify-content: space-between;
-    width: 30vw;
+    padding: 0rem 5rem 0rem 5rem;
   }
 }
 .logo {
   font-size: 42px;
-  margin: auto;
+  margin-left: 24vw;
 }
 h1 {
   font-family: $font-title;

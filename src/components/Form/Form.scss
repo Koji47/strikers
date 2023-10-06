@@ -1,0 +1,37 @@
+@use "../../styles/variables" as *;
+
+.Form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 350px;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    min-width: 400px;
+    margin: auto;
+    font-family: $font-text;
+  }
+  &__input {
+    text-align: center;
+    margin: 0.5rem;
+    font-family: $font-title;
+    height: 3rem;
+  }
+  &__button {
+    height: 5rem;
+    width: 20rem;
+    margin: auto;
+    margin-top: 5rem;
+  }
+  &__title {
+    margin: 2rem;
+  }
+
+  &__subtitle {
+    text-align: center;
+  }
+}

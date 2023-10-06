@@ -1,5 +1,6 @@
 import { ChangeEventHandler } from "react";
 import OptionType from "../../types/OptionType";
+import "./Select.scss";
 
 type SelectProps = {
   options: OptionType[];
@@ -20,19 +21,26 @@ const Select = ({
 }: SelectProps) => {
   return (
     <>
-      <label htmlFor={label}>{labelText}</label>
-      <select name={label} id={label} onChange={onChange} value={defaultValue}>
-        {<option value={defaultOption}>{defaultOption}</option>}
-        {options.map(({ name, id }) => (
-          <option
-            key={label + id}
-            value={id}
-            data-name={name.split(" ").join("-").toLowerCase()}
-          >
-            {name}
-          </option>
-        ))}
-      </select>
+      <div className="select-container">
+        <label htmlFor={label}>{labelText}</label>
+        <select
+          name={label}
+          id={label}
+          onChange={onChange}
+          value={defaultValue}
+        >
+          {<option value={defaultOption}>{defaultOption}</option>}
+          {options.map(({ name, id }) => (
+            <option
+              key={label + id}
+              value={id}
+              data-name={name.split(" ").join("-").toLowerCase()}
+            >
+              {name}
+            </option>
+          ))}
+        </select>
+      </div>
     </>
   );
 };

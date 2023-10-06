@@ -1,80 +1,81 @@
 import FightersResponse from "../../types/FighterResponse";
+import StrikeResponse from "../../types/StrikeResponse";
 import "./FavouriteStrikes.scss";
 
 type FavouriteStrikesProps = {
-  fighters: FightersResponse;
+  strikes: StrikeResponse[];
 };
 
-const FavouriteStrikes = ({ fighters }: FavouriteStrikesProps) => {
+const FavouriteStrikes = ({ strikes }: FavouriteStrikesProps) => {
   return (
     <div className="FavouriteStrikes">
       <h4 className="FavouriteStrikes__title">Favourite Strikes</h4>
       <div className="FavouriteStrikes__list">
-        {fighters.strikes1 ? (
+        {strikes[0] ? (
           <>
-            <h5 className="FavouriteStrikes__list__name">
-              {fighters.strikes1.name}
-            </h5>
+            <h5 className="FavouriteStrikes__list__name">{strikes[0].name}</h5>
             <h6 className="FavouriteStrikes__list__power">
-              {fighters.strikes1.power}
+              {strikes[0].power}
             </h6>
             <h6 className="FavouriteStrikes__list__speed">
-              {fighters.strikes1.speed}
+              {strikes[0].speed}
             </h6>
           </>
         ) : (
-          <p>No favourite strike available</p>
+          <p className="FavouriteStrikes__list__error">
+            No favourite strike available
+          </p>
         )}
       </div>
       <div className="FavouriteStrikes__list">
-        {fighters.strikes2 ? (
+        {strikes[1] ? (
           <>
-            <h5 className="FavouriteStrikes__list__name">
-              {fighters.strikes2.name}
-            </h5>
+            <h5 className="FavouriteStrikes__list__name">{strikes[1].name}</h5>
             <h6 className="FavouriteStrikes__list__power">
-              {fighters.strikes2.power}
+              {strikes[1].power}
             </h6>
             <h6 className="FavouriteStrikes__list__speed">
-              {fighters.strikes2.speed}
+              {strikes[1].speed}
             </h6>
           </>
         ) : (
-          <p>No favourite strike available</p>
+          <p className="FavouriteStrikes__list__error">
+            No favourite strike available
+          </p>
         )}
       </div>
       <div className="FavouriteStrikes__list">
-        {fighters.strikes3 ? (
+        {strikes[2] ? (
           <>
-            <h5 className="FavouriteStrikes__list__name">
-              {fighters.strikes3.name}
-            </h5>
+            <h5 className="FavouriteStrikes__list__name">{strikes[2].name}</h5>
             <h6 className="FavouriteStrikes__list__power">
-              {fighters.strikes3.power}
+              {strikes[2].power}
             </h6>
             <h6 className="FavouriteStrikes__list__speed">
-              {fighters.strikes3.speed}
+              {strikes[2].speed}
             </h6>
           </>
         ) : (
-          <p>No favourite strike available</p>
+          <p className="FavouriteStrikes__list__error">
+            No favourite strike available
+          </p>
         )}
       </div>
       <div className="FavouriteStrikes__list">
-        {fighters.strikes4 ? (
+        {strikes[3] ? (
           <>
-            <h5 className="FavouriteStrikes__list__name">
-              {fighters.strikes4.name}
-            </h5>
+            <h5 className="FavouriteStrikes__list__name">{strikes[3].name}</h5>
             <h6 className="FavouriteStrikes__list__power">
-              {fighters.strikes4.power}
+              {strikes[3].power}
             </h6>
             <h6 className="FavouriteStrikes__list__speed">
-              {fighters.strikes4.speed}
+              {strikes[3].speed}
             </h6>
           </>
         ) : (
-          <p>No favourite strike available</p>
+          <p className="FavouriteStrikes__list__error">
+            No favourite strike available
+          </p>
         )}
       </div>
     </div>

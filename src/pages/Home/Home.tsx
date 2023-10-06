@@ -11,14 +11,13 @@ type HomeProps = {
 
 const Home = ({ strikes, fighters, index }: HomeProps) => {
   const slicedFighters = fighters.slice(0, index);
-  console.log(slicedFighters);
 
   return (
     <>
       <FeaturedStrike strikes={strikes} />
 
       {slicedFighters.map((fighter, i) => (
-        <FighterCard fighters={fighter} key={i} />
+        <FighterCard fighter={fighter} key={i} />
       ))}
     </>
   );

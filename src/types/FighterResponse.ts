@@ -1,9 +1,11 @@
 type FightersResponse = {
+  id: number;
   first_name: string;
   last_name: string;
   gym: string;
   location: string;
   discipline: string;
+  profile_picture: string;
   age: number;
   strikes1: {
     id: number;
