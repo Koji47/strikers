@@ -13,6 +13,7 @@ const FighterCard = ({ fighter }: FighterCardProps) => {
   Object.values(fighter).map((value) => {
     if (typeof value === "object") {
       strikeData.push(value);
+      console.log(value);
     }
   });
 

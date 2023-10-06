@@ -87,10 +87,17 @@ A full stack project with a complete front end and back end, the app displays da
 - The Fighter card uses the FavouriteStrikes component to display information about each of the favourite strikes
 
 ```
-  const strikeData: any[] = [];
   Object.values(fighter).map((value) => {
     if (typeof value === "object") {
       strikeData.push(value);
     }
   });
 ```
+
+- Object.values(fighter) returns a fighter with data structured as follows:
+
+![ObjectValue](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_ObjectValue.PNG)
+
+- To get access to the strike data within each fighter i mapped the values into a variable called strikeData
+
+![StrikeData](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_StrikeData.PNG)
