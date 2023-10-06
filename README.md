@@ -1,7 +1,5 @@
 ### Strikers Fullstack Project
 
-## Project Title
-
 ## Strikers
 
 ## Description
@@ -19,6 +17,18 @@ A full stack project with a complete front end and back end, the app displays da
   - [FightersPage](#fighterspage)
   - [EditStrike](#editstrike)
   - [CreateStrike](#createstrike)
+- [Components](#components)
+  - [Button](#button)
+  - [FavouriteStrikes](#favouritestrikes)
+  - [FeaturedStrike](#featuredStrike)
+  - [FighterCard](#fightercard)
+  - [Form](#form)
+  - [Loading](#loading)
+  - [Nav](#nav)
+  - [Select](#select)
+  - [StrikeCard](#strikecard)
+  - [StrikeList](#strikelist)
+  - [VideoPlayer](#videoplayer)
 
 ## Planning
 
@@ -29,26 +39,41 @@ A full stack project with a complete front end and back end, the app displays da
 
 ## Installation
 
-use npm install to make sure all dependencies are installed, all packages are saved in package.json
-"npm i"
+- use npm install to make sure all dependencies are installed, all packages are saved in package.json
+- "npm i"
 
 ## Usage
 
-users are able to view different fighters and the information stored about them,
-users are able to view videos of each strike,
-users are able to create new strikes,
-users are able to edit strikes,
-users are able to delete strikes.
+- users are able to view different fighters and the information stored about them,
+- users are able to view videos of each strike,
+- users are able to create new strikes,
+- users are able to edit strikes,
+- users are able to delete strikes.
 
 ## Pages
 
 ## Home
 
-The Home page displays a random featured strike as well as it's tutorial video,
-the Home page also displays 3 random fighters as a Fighter Card
+- The Home page displays a random featured strike as well as it's tutorial video,
+- the Home page also displays 3 random fighters as a Fighter Card
 
 ## Strikes
 
-The Strikes page displays all strikes,
-users are able to filter through the strikes by the strike_type "Kick" or "Punch"
-users can access edit strikes and create strikes from this page
+- The Strikes page displays all strikes,
+- users are able to filter through the strikes by the strike_type "Kick" or "Punch"
+- users can access edit strikes and create strikes from this page
+
+## Edit Strike
+
+- The Edit strike page allows the user to edit and delete a strike
+- The page uses useParams to determine the URL
+
+## Create Strike
+
+- The Create Strike page allows the user to create a new strike by filling out a form
+- The form has default values inside
+
+## Fighters Page
+
+- The Fighters Page displays a list of fighters,
+- users are able to filter through the fighters by the discipline in which they practice
