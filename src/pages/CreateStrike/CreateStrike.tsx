@@ -18,7 +18,6 @@ const CreateStrike = ({ strikes }: CreateStrikeProps) => {
       },
       body: JSON.stringify(newStrike),
     });
-    console.log(newStrike);
     if (result.ok) {
       alert("Strike added successfully");
       const strike = await result.json();
@@ -27,7 +26,6 @@ const CreateStrike = ({ strikes }: CreateStrikeProps) => {
       window.location.reload();
     } else {
       const message = await result.text();
-      console.log(newStrike);
       alert(message);
     }
   };

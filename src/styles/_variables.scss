@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Roboto&display=swap");
+
 // breakpoints
 $mobile-breakpoint: 320px;
 $tablet-breakpoint: 768px;
@@ -18,5 +20,5 @@ $text-color: $color-charcoal;
 $background-color: $color-off-white;
 
 // fonts
-$font-title: "Roboto";
-$font-text: "Nunito Sans";
+$font-title: "Roboto", sans-serif;
+$font-text: "Nunito Sans", sans-serif;

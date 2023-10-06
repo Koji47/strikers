@@ -24,10 +24,6 @@ const StrikeCard = ({
   power,
   speed,
 }: StrikeCardProps) => {
-  let test = 1;
-  const testFunction = () => {
-    test = test + 1;
-  };
   return (
     <div className="Strike">
       <h4 className="Strike__name">{name}</h4>
@@ -49,7 +45,7 @@ const StrikeCard = ({
         <VideoPlayer video_url={video_url_fighter} />
       </div>
       <NavLink to={`/strike/${id}`}>
-        <Button label={"Edit"} onClick={testFunction} variant="secondary" />
+        <Button label={"Edit"} variant="secondary" />
       </NavLink>
     </div>
   );

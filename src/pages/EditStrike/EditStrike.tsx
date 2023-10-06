@@ -2,11 +2,6 @@ import "./EditStrike.scss";
 
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import FighterCard from "../../components/FighterCard/FighterCard";
-import FightersResponse from "../../types/FighterResponse";
-import OptionType from "../../types/OptionType";
-import FightersRequest from "../../types/FighterRequest";
-import { getFighterRequest } from "../../utils/fighters";
 import CustomForm from "../../components/Form/Form";
 import StrikeResponse from "../../types/StrikeResponse";
 import StrikeCard from "../../components/StrikeCard/StrikeCard";
