@@ -77,3 +77,20 @@ A full stack project with a complete front end and back end, the app displays da
 
 - The Fighters Page displays a list of fighters,
 - users are able to filter through the fighters by the discipline in which they practice
+
+## Components
+
+## FighterCard
+
+- The Fighter card displays the information about each fighter
+- Each card has name, image, location, gym, discipline and a list of favourite strikes
+- The Fighter card uses the FavouriteStrikes component to display information about each of the favourite strikes
+
+```
+  const strikeData: any[] = [];
+  Object.values(fighter).map((value) => {
+    if (typeof value === "object") {
+      strikeData.push(value);
+    }
+  });
+```
