@@ -44,3 +44,7 @@ the Home page also displays 3 random fighters as a Fighter Card
 The Strikes page displays all strikes,
 users are able to filter through the strikes by the strike_type "Kick" or "Punch"
 users can access edit strikes and create strikes from this page
+
+## Planning
+
+![Trello](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers.PNG)
