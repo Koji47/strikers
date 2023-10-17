@@ -16,8 +16,6 @@ const FighterCard = ({ fighter }: FighterCardProps) => {
     }
   });
 
-  console.log(strikeData);
-
   return (
     <div className="FighterCard">
       <img
