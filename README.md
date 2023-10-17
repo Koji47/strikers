@@ -107,3 +107,7 @@ A full stack project with a complete front end and back end, the app displays da
 ```
 
 - Running "console.log(fighter.strikes1)" would return undefined, to fix this issue I made a variable called strikeData that would store the strike data taken from the fighter data.
+
+![StrikeDataObj](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_strikedata_obj.PNG)
+
+- The StrikeData object values are now accessible and can be used in the fighterCard component.
