@@ -104,10 +104,8 @@ A full stack project with a complete front end and back end, the app displays da
 
 ![ObjectValue](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_ObjectValue.PNG)
 
-![StrikeDataObj](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_strikedata_obj.PNG)
-
 - To get access to the strike data within each fighter i mapped the values into a variable called strikeData
 
-![StrikeData](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_StrikeData.PNG)
+![StrikeDataObj](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_strikedata_obj.PNG)
 
 - The StrikeData object values are now accessible and can be used in the fighterCard component.
