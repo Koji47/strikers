@@ -83,7 +83,7 @@ A full stack project with a complete front end and back end, the app displays da
 ## FighterCard
 
 - The Fighter card displays the information about each fighter
-- Each card has name, image, location, gym, discipline and a list of favourite strikes
+- Each card has a name, image, location, gym, discipline and a list of favourite strikes
 - The Fighter card uses the FavouriteStrikes component to display information about each of the favourite strikes
 
 ```
@@ -101,3 +101,9 @@ A full stack project with a complete front end and back end, the app displays da
 - To get access to the strike data within each fighter i mapped the values into a variable called strikeData
 
 ![StrikeData](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_StrikeData.PNG)
+
+```
+  console.log(fighter.strikes1);
+```
+
+- Running "console.log(fighter.strikes1)" would return undefined, to fix this issue I made a variable called strikeData that would store the strike data taken from the fighter data.

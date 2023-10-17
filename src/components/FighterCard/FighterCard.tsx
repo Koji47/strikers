@@ -13,7 +13,6 @@ const FighterCard = ({ fighter }: FighterCardProps) => {
   Object.values(fighter).map((value) => {
     if (typeof value === "object") {
       strikeData.push(value);
-      console.log(value);
     }
   });
 
@@ -24,11 +23,11 @@ const FighterCard = ({ fighter }: FighterCardProps) => {
         alt="Fighter Profile Picture"
         className="FighterCard__img"
       />
-      <h2 className="FighterCard__gym">{fighter.gym}</h2>
+      <h2 className="FighterCard__gym">
+        {fighter.first_name} {fighter.last_name}
+      </h2>
       <div className="FighterCard__info">
-        <h2 className="FighterCard__info__name">
-          {fighter.first_name} {fighter.last_name}
-        </h2>
+        <h2 className="FighterCard__info__name">{fighter.gym}</h2>
         <h3 className="FighterCard__info__discipline">{fighter.discipline}</h3>
         <h3 className="FighterCard__info__location">{fighter.location}</h3>
       </div>
