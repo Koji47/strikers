@@ -87,6 +87,12 @@ A full stack project with a complete front end and back end, the app displays da
 - The Fighter card uses the FavouriteStrikes component to display information about each of the favourite strikes
 
 ```
+  console.log(fighter.strikes1);
+```
+
+- Running "console.log(fighter.strikes1)" would return undefined, to fix this issue I made a variable called strikeData that would store the strike data taken from the fighter data.
+
+```
   Object.values(fighter).map((value) => {
     if (typeof value === "object") {
       strikeData.push(value);
@@ -98,16 +104,10 @@ A full stack project with a complete front end and back end, the app displays da
 
 ![ObjectValue](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_ObjectValue.PNG)
 
+![StrikeDataObj](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_strikedata_obj.PNG)
+
 - To get access to the strike data within each fighter i mapped the values into a variable called strikeData
 
 ![StrikeData](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_StrikeData.PNG)
-
-```
-  console.log(fighter.strikes1);
-```
-
-- Running "console.log(fighter.strikes1)" would return undefined, to fix this issue I made a variable called strikeData that would store the strike data taken from the fighter data.
-
-![StrikeDataObj](https://github.com/Koji47/strikers/blob/main/src/assets/Readme_images/strikers_strikedata_obj.PNG)
 
 - The StrikeData object values are now accessible and can be used in the fighterCard component.
